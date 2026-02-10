@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://pjsnpel4er7g"]
+
+[ext_resource type="Script" uid="uid://bm6tmjygyg2xf" path="res://Scripts/start_menu.gd" id="1_a43kq"]
+[ext_resource type="Texture2D" uid="uid://c0o0iu2qh75ik" path="res://Assets/START_BACKGROUND.png" id="1_m6uer"]
+[ext_resource type="Texture2D" uid="uid://csvekhmn7srgm" path="res://Assets/START_BUTTON.png" id="2_a43kq"]
+[ext_resource type="Texture2D" uid="uid://wungxk3uewhl" path="res://Assets/SETTINGS_BUTTON.png" id="3_626he"]
+
+[node name="Start Menu" type="Control" unique_id=1904561044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a43kq")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1708952434]
+position = Vector2(571, 326.99997)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("1_m6uer")
+metadata/_edit_lock_ = true
+
+[node name="Start" type="TextureButton" parent="Background" unique_id=1986963786]
+offset_left = -568.0851
+offset_top = -387.23398
+offset_right = 177.91492
+offset_bottom = -48.23398
+texture_normal = ExtResource("2_a43kq")
+texture_pressed = ExtResource("2_a43kq")
+
+[node name="Settings" type="TextureButton" parent="Background" unique_id=2014951806]
+offset_left = -246.80852
+offset_top = 6.3830433
+offset_right = 568.19147
+offset_bottom = 360.38306
+texture_normal = ExtResource("3_626he")
+texture_pressed = ExtResource("3_626he")
+
+[connection signal="pressed" from="Background/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Background/Settings" to="." method="_on_settings_pressed"]

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://rkegampe6x3m"]
+
+[ext_resource type="Script" uid="uid://d4fkpt1s5ohnf" path="res://Scripts/settings_menu.gd" id="1_h2y1r"]
+[ext_resource type="Texture2D" uid="uid://c0o0iu2qh75ik" path="res://Assets/START_BACKGROUND.png" id="1_mlw3h"]
+[ext_resource type="Texture2D" uid="uid://b5x3fke23jpbt" path="res://Assets/BACK_BUTTON.png" id="2_d0eu6"]
+[ext_resource type="Texture2D" uid="uid://d0cxg16o0ag7u" path="res://Assets/SOUNDBAR_BAR.png" id="3_fiqec"]
+[ext_resource type="Script" uid="uid://d2cl71kad55es" path="res://Scripts/h_slider.gd" id="5_3etfd"]
+
+[node name="Settings Menu" type="Control" unique_id=757666094]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2y1r")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=775228196]
+position = Vector2(571, 326.99997)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("1_mlw3h")
+metadata/_edit_lock_ = true
+
+[node name="Back" type="TextureButton" parent="Background" unique_id=965106068]
+offset_left = -557.4468
+offset_top = -380.851
+offset_right = 179.55322
+offset_bottom = -24.851013
+texture_normal = ExtResource("2_d0eu6")
+texture_pressed = ExtResource("2_d0eu6")
+
+[node name="Sound" type="TextureButton" parent="Background" unique_id=705649910]
+offset_left = -393.617
+offset_top = -25.531849
+offset_right = 543.383
+offset_bottom = 349.46814
+texture_normal = ExtResource("3_fiqec")
+texture_pressed = ExtResource("3_fiqec")
+
+[node name="HSlider" type="HSlider" parent="Background" unique_id=1392510224]
+offset_left = -345.1553
+offset_top = 103.636055
+offset_right = 152.4891
+offset_bottom = 144.06165
+rotation = -0.031889357
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("5_3etfd")
+
+[connection signal="pressed" from="Background/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Background/HSlider" to="Background/HSlider" method="_on_value_changed"]
