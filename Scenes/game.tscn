@@ -18,17 +18,18 @@ script = ExtResource("1_qxrlw")
 
 [node name="Pause" type="TextureButton" parent="." unique_id=652914661]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.44900003
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.44900003
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 215.03864
-offset_top = -388.0
-offset_right = 413.0386
-offset_bottom = -167.0
+offset_left = 723.78467
+offset_top = -559.0
+offset_right = 921.7847
+offset_bottom = -338.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_ebmjs")
 texture_pressed = ExtResource("1_ebmjs")
 
