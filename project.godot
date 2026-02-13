@@ -24,4 +24,4 @@ global="*uid://xmwg2g6olevu"
 
 [rendering]
 
-rendering_device/driver.windows="d3d12" 
+rendering_device/driver.windows="d3d12"
